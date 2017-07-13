@@ -1,3 +1,3 @@
 Stats for https://www.twitch.tv/ryuzilla
-To run: goto root directory, npm install & npm start
+To run: cmd root directory, npm install & npm start
 To view: http://localhost:3000/
