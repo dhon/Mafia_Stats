@@ -20,7 +20,7 @@ angular.module('app.services', [])
                 data[i] = json;
             })(); 
         }
-        for(var i = 9; i < 54; i++){
+        for(var i = 9; i < 56; i++){
             var json = (function () {
                 var json = null;
                 $.ajax({
