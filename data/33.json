@@ -17,7 +17,7 @@
 	"mafia": [
 		"Ocane",
 		"Radial",
-		"DLGN"
+		"dLGN"
 	],
 	"n0": [
 		"Joey",
@@ -32,7 +32,7 @@
 		"Rollo",
 		"Pope"
 	],
-	"f3_win": [ "DLGN" ],
+	"f3_win": [ "dLGN" ],
 	"f3_loss": [ "Pope", "Rollo" ],
 	"winner": "Mafia"
 }
