@@ -5,35 +5,15 @@ angular.module('app.services', [])
     var data = [];
 
     function getJSON(){
-        for(var i = 0; i < 9; i++){
-            var json = (function () {
-                var json = null;
-                $.ajax({
-                    'async': false,
-                    'global': false,
-                    'url': '0' + (i+1) + '.json',
-                    'dataType': "json",
-                    'success': function (data) {
-                        json = data;
-                    }
-                });
-                data[i] = json;
-            })(); 
-        }
-        for(var i = 9; i < 62; i++){
-            var json = (function () {
-                var json = null;
-                $.ajax({
-                    'async': false,
-                    'global': false,
-                    'url': (i+1) + '.json',
-                    'dataType': "json",
-                    'success': function (data) {
-                        json = data;
-                    }
-                });
-                data[i] = json;
-            })(); 
+        for(var i = 0; i < 62; i++){
+            var ourRequest = new XMLHttpRequest();
+            var num = i < 9 ? '0' + (i+1) : (i+1);
+            var URL = 'http://localhost:3000/' + num + '.json'
+            ourRequest.open('GET', URL, false);
+            ourRequest.onload = function(){
+                data[i] = JSON.parse(ourRequest.responseText);
+            };
+            ourRequest.send();
         }
     };
 
