@@ -1,0 +1,38 @@
+{
+	"id": "11_08_2017_G1",
+	"cop": "Ramza",
+	"medic": "Dave Dob",
+	"vigilante": "Ocane",
+	"vanilla_town": [
+		"Pope",
+		"Colin",
+		"dLGN",
+		"EffinNipples",
+		"Ryan",
+		"Rollo",
+		"Striker",
+		"Liam",
+		"zGHOST"
+	],
+	"mafia": [
+		"Ryuzilla",
+		"Joey",
+		"Pat"
+	],
+	"n0": [
+		"dLGN",
+		"zGHOST"
+	],
+	"n0_save": "Joey",
+	"shot": "Ryuzilla",
+	"lynched": [
+		"Pope",
+		"Joey",
+		"Liam",
+		"Rollo",
+		"Pat"
+	],
+	"f3_win": [ "Colin", "EffinNipples" ],
+	"f3_loss": [ "Pat" ],
+	"winner": "Town"
+}
