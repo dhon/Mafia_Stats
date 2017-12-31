@@ -28,9 +28,7 @@ angular.module('app.services', [])
                     }
                 }
                 if(!found){
-                    stats.push({name:data[i].mafia[j], played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
-                        lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
-                        f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0});
+                    addPlayer(data[i].mafia[j]);
                 }
             }
             for(var j = 0; j < data[i].vanilla_town.length; j++){
@@ -42,9 +40,7 @@ angular.module('app.services', [])
                     }
                 }
                 if(!found){
-                    stats.push({name:data[i].vanilla_town[j], played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
-                        lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
-                        f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0});
+                    addPlayer(data[i].vanilla_town[j]);
                 }
             }
             var cop = false;
@@ -55,9 +51,7 @@ angular.module('app.services', [])
                 }
             }
             if(!cop){
-                stats.push({name:data[i].cop, played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
-                    lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
-                    f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0});
+                addPlayer(data[i].cop);
             }
             var medic = false;
             for(var x = 0; x < stats.length; x++){
@@ -67,9 +61,7 @@ angular.module('app.services', [])
                 }
             }
             if(!medic){
-                stats.push({name:data[i].medic, played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
-                    lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
-                    f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0});
+                addPlayer(data[i].medic);
             }
             var vigilante = false;
             for(var x = 0; x < stats.length; x++){
@@ -79,11 +71,16 @@ angular.module('app.services', [])
                 }
             }
             if(!vigilante){
-                stats.push({name:data[i].vigilante, played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
-                    lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
-                    f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0});
+                addPlayer(data[i].vigilante);
             }
         }
+    };
+
+    function addPlayer(player){
+        stats.push({name:player, played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
+                    lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
+                    f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0,
+                    n0_kills:[], n0_played:[]});
     };
 
     function getRollCop(){
