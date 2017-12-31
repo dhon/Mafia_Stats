@@ -9,6 +9,12 @@ angular.module('app.routes', ['ui.router', 'app.controllers', 'app.services'])
             controller: 'homeCtrl'
         })
 
+        .state('kills', {
+            url: '/kills/:id',
+            templateUrl: '/../kills.html',
+            controller: 'killsCtrl'
+        })
+
     $urlRouterProvider.otherwise('/')
 
 });

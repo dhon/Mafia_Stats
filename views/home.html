@@ -28,7 +28,7 @@
 		<th>Mafia Loss</th>
 	</tr>
 	<tr ng-repeat="player in stats">
-		<th>{{player.name}}</th>
+		<th ui-sref="kills({id: player.name})">{{player.name}}</th>
 		<th>{{player.played}}</th>
 		<th>{{player.pTown}}</th>
 		<th>{{player.pPR}}</th>
