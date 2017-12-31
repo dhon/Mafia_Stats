@@ -80,7 +80,7 @@ angular.module('app.services', [])
         stats.push({name:player, played:0, pTown:null, pPR:null, pWin:null, pTownWin:null, pMafiaWin:null, n0:0, n0_save:0,
                     lynch_mafia:0, lynch_vt:0, lynch_pr:0, shot_mafia:0, shot_vt:0, shot_pr:0, vigi_hit:0, vigi_miss:0, 
                     f3_win:0, f3_loss:0, roll_cop:0, roll_medic:0, roll_vigi:0, win_town:0, loss_town:0, win_mafia:0, loss_mafia:0,
-                    n0_kills:[], n0_played:[]});
+                    n0_kills:[], n0_towns:[]});
     };
 
     function getRollCop(){
