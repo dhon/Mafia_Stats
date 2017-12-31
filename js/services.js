@@ -5,7 +5,7 @@ angular.module('app.services', [])
     var data = [];
 
     function getJSON(){
-        for(var i = 0; i < 98; i++){
+        for(var i = 0; i < 100; i++){
             var ourRequest = new XMLHttpRequest();
             var num = i < 9 ? '0' + (i+1) : (i+1);
             var URL = 'http://localhost:3000/' + num + '.json'
