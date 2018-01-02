@@ -1,3 +1,5 @@
+DEPRECIATED: Use https://github.com/dhon/AllStars_2017
+
 Stats for https://www.twitch.tv/ryuzilla
 To run: cmd root directory, npm install & npm start
 To view: http://localhost:3000/

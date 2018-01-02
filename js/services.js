@@ -35,6 +35,7 @@ angular.module('app.services', [])
                 }
                 if(!found){
                     addPlayer(data[i].mafia[j]);
+                    getTargets(stats.length-1, i);
                 }
             }
             for(var j = 0; j < data[i].vanilla_town.length; j++){
@@ -113,7 +114,6 @@ angular.module('app.services', [])
             addTarget(data[i].cop, x, i);
         }
         var medic = false;
-        kill = 0;
         for(var a = 0; a < stats[x].n0_kills.length; a++){
             if(stats[x].n0_kills[a].name == data[i].medic){
                 medic = true;
